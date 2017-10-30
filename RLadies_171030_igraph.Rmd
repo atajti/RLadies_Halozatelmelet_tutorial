@@ -9,7 +9,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-# setwd("/media/munka/Új kötet/171030_RLadies_igraph")
 ```
 
 
@@ -254,11 +253,11 @@ Barabási-Albert László és Albert Réka az ezredfordulón publikálták model
 ba_graf <- sample_pa(150)
 plot(ba_graf,
      main="Barabási - Albert féle véletlen gráf")
-plot(degree.distribution(er_graf),
+plot(degree.distribution(ba_graf),
      main="Barabási - Albert gráf fokszám-eloszlása",
      ylab="Adott fokszám előfordulási aránya",
      xlab="Fokszám")
-plot(degree.distribution(er_graf),
+plot(degree.distribution(ba_graf),
      main="Barabási - Albert gráf fokszám-eloszlása logaritmikus skálán",
      ylab="Adott fokszám előfordulási aránya",
      xlab="Fokszám",
@@ -266,6 +265,4 @@ plot(degree.distribution(er_graf),
 ```
 
 Ez a modell is teljesíti a kis világ kritériumot, az átlója `r diameter(ba_graf)`, azonban a valós hálózatokban sok helyen megfigyelhető skálafüggetlen fokszám-eloszlást is reprodukálja. 
-
-A gr
 
